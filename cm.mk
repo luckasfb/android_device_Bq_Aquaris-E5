@@ -17,6 +17,10 @@ $(call inherit-product-if-exists, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/Bq/Aquaris-E5/full_Aquaris-E5.mk)
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
 PRODUCT_NAME := cm_Aquaris-E5
 PRODUCT_DEVICE := Aquaris-E5
 PRODUCT_MODEL := Bq Aquaris E5
