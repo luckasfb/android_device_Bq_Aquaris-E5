@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+DEVICE_FOLDER := device/Bq/Aquaris-E5
+
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -23,10 +25,13 @@ TARGET_NO_BOOTLOADER := false
 BOARD_BOOTIMAGE_PARTITION_SIZE := 20971520
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_FLASH_BLOCK_SIZE := 4096
-TARGET_PREBUILT_KERNEL := device/Bq/Aquaris-E5/recovery/kernel
+# TODO: temporarily point to recovery to avoid build break
+TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/recovery/kernel
 
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 20971520
-TARGET_RECOVERY_FSTAB := device/Bq/Aquaris-E5/recovery/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_FOLDER)/recovery/recovery.fstab
 
-TARGET_PREBUILT_RECOVERY_KERNEL := device/Bq/Aquaris-E5/recovery/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := $(DEVICE_FOLDER)/recovery/kernel
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_FOLDER)/boot.mk
