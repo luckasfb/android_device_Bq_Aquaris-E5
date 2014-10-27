@@ -27,4 +27,4 @@ TARGET_RECOVERY_FSTAB := device/Bq/Aquaris-E5/recovery/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 TARGET_NO_BOOTLOADER := false
-TARGET_PREBUILT_KERNEL := device/Bq/Aquaris-E5/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/Bq/Aquaris-E5/recovery/kernel
