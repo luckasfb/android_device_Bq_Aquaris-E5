@@ -1,0 +1,100 @@
+#
+# This file lists all of the proprietary blobs that need to be
+# extracted from a stock device. The extract-files.sh script
+# parses this file and copies the blobs into the vendor and build
+# trees as needed.
+#
+# File format:
+#   - Comments lines start with a hash (#) character and will be
+#     ignore.
+#   - Blobs should be listed with their path relative to /system
+#     on the device.
+#   - A different destination path may be specified after a colon on
+#     the same line as the blob source path. Otherwise, the
+#     destination path with be the same as it was on the device.
+#   - Options for a particular blob are specified in a comment
+#     after the blob path.
+#
+# Blob options:
+#   - needed_for_build: the blob will also be copied into the obj
+#     directory for use in the build of other open source files.
+#   - optional: if the blob is not found, extraction will not abort.
+#     directory for use in the build of other open source files.
+#
+
+vendor/ft5336/VEGETAHD/tianma/55_12.i
+vendor/ft5336/VEGETAHD/truely/5a_16.i
+vendor/lib/drm/libdrmwvmplugin.so
+vendor/lib/libWVStreamControlAPI_L3.so
+vendor/lib/libwvdrm_L3.so
+vendor/lib/libwvm.so
+vendor/lib/libstagefright_soft_ddpdec.so
+vendor/lib/mediadrm/libwvdrmengine.so
+# vendor/lib/hw/audio.a2dp.blueangel.so
+# vendor/lib/hw/bluetooth.blueangel.so
+# vendor/lib/soundfx/libdseffect.so
+# vendor/app/Ds.apk
+# vendor/app/Ds.odex
+# vendor/app/DsUI.apk
+# vendor/app/DsUI.odex
+vendor/media/LMspeed_508.emd
+vendor/media/PFFprec_600.emd
+vendor/pittpatt/recognition/face.face.y0-y0-22-b-N.bin
+vendor/pittpatt/detection/multi_pose_face_landmark_detectors.7/left_eye-y0-yi45-p0-pi45-r0-ri20.lg_32.bin
+vendor/pittpatt/detection/multi_pose_face_landmark_detectors.7/nose_base-y0-yi45-p0-pi45-r0-ri20.lg_32.bin
+vendor/pittpatt/detection/multi_pose_face_landmark_detectors.7/right_eye-y0-yi45-p0-pi45-r0-ri20.lg_32-2.bin
+vendor/pittpatt/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-r0-ri30.4a-v24.bin
+vendor/pittpatt/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rn30-ri30.5-v24.bin
+vendor/pittpatt/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rp30-ri30.5-v24.bin
+
+lib/hw/hwcomposer.mt6582.so
+lib/hw/libaudio.r_submix.default.so
+lib/hw/gps.default.so
+lib/hw/libaudio.usb.default.so
+lib/hw/lights.default.so
+lib/hw/power.default.so
+lib/hw/audio.primary.default.so
+lib/hw/audio_policy.default.so
+lib/hw/local_time.default.so
+lib/hw/camera.default.so
+lib/hw/sensors.default.so
+lib/hw/gralloc.default.so
+lib/hw/keystore.default.so
+lib/hw/audio_policy.stub.so
+lib/hw/gralloc.mt6582.so
+
+lib/libm4u.so
+lib/libMali.so
+lib/libdpframework.so
+lib/libcutils.so
+lib/libion.so
+
+bin/nvram_daemon
+bin/nvram_agent_binder
+bin/featured
+lib/libnvram.so
+lib/libcustom_nvram.so
+lib/libnvram_daemon_callback.so
+lib/libnvram_platform.so
+lib/libnvram_sec.so
+
+etc/firmware/catcher_filter_1_wg_n.bin
+etc/firmware/modem_1_wg_n.img
+etc/firmware/mt6572_82_patch_e1_0_hdr.bin
+etc/firmware/mt6572_82_patch_e1_1_hdr.bin
+etc/firmware/S_ANDRO_SFL.ini
+etc/firmware/WIFI_RAM_CODE
+etc/firmware/WIFI_RAM_CODE_E6
+etc/firmware/WIFI_RAM_CODE_MT6582
+etc/firmware/WIFI_RAM_CODE_MT6628
+etc/firmware/WMT_SOC.cfg
+etc/firmware/mt6627/mt6627_fm_v1_coeff.bin
+etc/firmware/mt6627/mt6627_fm_v1_patch.bin
+etc/firmware/mt6627/mt6627_fm_v2_coeff.bin
+etc/firmware/mt6627/mt6627_fm_v2_patch.bin
+etc/firmware/mt6627/mt6627_fm_v3_coeff.bin
+etc/firmware/mt6627/mt6627_fm_v3_patch.bin
+etc/firmware/mt6627/mt6627_fm_v4_coeff.bin
+etc/firmware/mt6627/mt6627_fm_v4_patch.bin
+etc/firmware/mt6627/mt6627_fm_v5_coeff.bin
+etc/firmware/mt6627/mt6627_fm_v5_patch.bin

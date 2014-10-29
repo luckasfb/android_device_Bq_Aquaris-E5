@@ -14,4 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo full_Aquaris-E5-userdebug
+add_lunch_combo full_E5HD-userdebug
+add_lunch_combo cm_E5HD-userdebug

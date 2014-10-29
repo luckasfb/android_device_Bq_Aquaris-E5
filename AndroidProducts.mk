@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_Aquaris-E5.mk
+    $(LOCAL_DIR)/full_E5HD.mk

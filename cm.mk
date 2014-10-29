@@ -12,18 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product-if-exists, vendor/cm/config/common_full_phone.mk)
-
 # Inherit device configuration
-$(call inherit-product, device/Bq/Aquaris-E5/full_Aquaris-E5.mk)
+$(call inherit-product, device/Bq/E5HD/full_E5HD.mk)
+$(call inherit-product-if-exists, vendor/cm/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-PRODUCT_NAME := cm_Aquaris-E5
-PRODUCT_DEVICE := Aquaris-E5
+PRODUCT_NAME := cm_E5HD
+PRODUCT_DEVICE := E5HD
 PRODUCT_MODEL := Bq Aquaris E5
-PRODUCT_RELEASE_NAME := Aquaris-E5
+PRODUCT_RELEASE_NAME := E5HD
 PRODUCT_BRAND := Bq
 PRODUCT_MANUFACTURER := Bq

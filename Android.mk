@@ -22,6 +22,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),Aquaris-E5)
+ifeq ($(TARGET_DEVICE),E5HD)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif

@@ -4,7 +4,7 @@
 
 # INIT mount points
 #<src>                 <mnt_point>    <type>  <mnt_flags and options>                 <fs_mgr_flags>
-/dev/bootimg            /bootimg       emmc    defaults                                defaults
+/dev/bootimg            /boot          emmc    defaults                                defaults
 /dev/recovery           /recovery      emmc    defaults                                defaults
 /dev/uboot              /uboot         emmc    defaults                                defaults
 /dev/misc				/misc		   emmc	   defaults								   defaults

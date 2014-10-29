@@ -3,3 +3,4 @@
 #
 
 ro.sf.lcd_density=294
+persist.sys.usb.config=adb
