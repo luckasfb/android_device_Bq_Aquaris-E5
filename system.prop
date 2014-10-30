@@ -1,0 +1,4 @@
+#
++# system.prop for Aquaris E5
++#
++ro.carrier=wifi-only
