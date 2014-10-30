@@ -15,4 +15,8 @@ mkdir -p $BASE/$DIR
 cp /home/david/Android/stock/system/$FILE $BASE/$FILE
 done
 
+# some extra stuff
+cp /home/david/Android/stock/system/lib/hw/audio_policy.default.so $BASE/lib/hw/audio_policy.mt6582.so
+cp /home/david/Android/stock/system/lib/libaudio.primary.default.so $BASE/lib/hw/audio.primary.mt6582.so
+
 ./setup-makefiles.sh
