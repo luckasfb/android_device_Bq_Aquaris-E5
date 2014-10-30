@@ -73,7 +73,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 	ro.telephony.ril_class=MediaTekRIL \
 	wifi.direct.interface=p2p0 \
 	wifi.interface=wlan0 \
-	wifi.tethering.interface=ap0 \
+	wifi.tethering.interface=ap0
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 

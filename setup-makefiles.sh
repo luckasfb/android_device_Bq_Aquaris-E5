@@ -74,5 +74,5 @@ echo " $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
 done
 
 # hackywhacky
-echo "PRODUCT_COPY_FILES += \\" >> $MAKEFILE
-echo " $OUTDIR/proprietary/lib/libaudio.primary.default.so:system/lib/hw/audio.primary.mt6582.so$LINEEND" >> $MAKEFILE
+# echo "PRODUCT_COPY_FILES += \\" >> $MAKEFILE
+# echo " $OUTDIR/proprietary/lib/libaudio.primary.default.so:system/lib/hw/audio.primary.mt6582.so$LINEEND" >> $MAKEFILE
