@@ -75,5 +75,5 @@ done
 
 # hackywhacky
 echo "PRODUCT_COPY_FILES += \\" >> $MAKEFILE
-echo " $OUTDIR/proprietary/lib/libaudio.primary.default.so:system/lib/hw/audio.primary.mt6582.so\$LINEEND" >> $MAKEFILE
-echo " $OUTDIR/proprietary/lib/hw/audio_policy.mt6582.so:system/lib/hw/audio_policy.mt6582.so$LINEEND" >> $MAKEFILE
+echo "  $OUTDIR/proprietary/lib/hw/audio.primary.mt6582.so:system/lib/hw/audio.primary.mt6582.so \\" >> $MAKEFILE
+echo "  $OUTDIR/proprietary/lib/hw/audio_policy.mt6582.so:system/lib/hw/audio_policy.mt6582.so" >> $MAKEFILE
