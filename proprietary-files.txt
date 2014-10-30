@@ -47,7 +47,7 @@ vendor/pittpatt/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-r0-ri30
 vendor/pittpatt/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rn30-ri30.5-v24.bin
 vendor/pittpatt/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rp30-ri30.5-v24.bin
 
-lib/hw/hwcomposer.mt6582.so
+# lib/hw/hwcomposer.mt6582.so
 lib/hw/libaudio.r_submix.default.so
 lib/hw/gps.default.so
 lib/hw/libaudio.usb.default.so
@@ -60,14 +60,17 @@ lib/hw/camera.default.so
 lib/hw/sensors.default.so
 lib/hw/gralloc.default.so
 lib/hw/keystore.default.so
+lib/libkeystore_client.so
 lib/hw/audio_policy.stub.so
 lib/hw/gralloc.mt6582.so
 
 lib/libm4u.so
 lib/libMali.so
 lib/libdpframework.so
-lib/libcutils.so
 lib/libion.so
+
+bin/wlan_loader
+bin/6620_launcher
 
 bin/nvram_daemon
 bin/nvram_agent_binder
@@ -79,9 +82,6 @@ lib/libnvram_platform.so
 lib/libnvram_sec.so
 lib/libfile_op.so
 lib/libhwm.so 
-
-bin/wpa_supplicant
-lib/libwapi.so
 
 etc/firmware/catcher_filter_1_wg_n.bin
 etc/firmware/modem_1_wg_n.img

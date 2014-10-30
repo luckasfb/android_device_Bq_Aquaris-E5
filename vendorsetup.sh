@@ -14,5 +14,7 @@
 # limitations under the License.
 #
 
-add_lunch_combo full_E5HD-userdebug
-add_lunch_combo cm_E5HD-userdebug
+for i in eng userdebug user; do
+	add_lunch_combo full_E5HD-${i}
+	add_lunch_combo cm_E5HD-${i}
+done

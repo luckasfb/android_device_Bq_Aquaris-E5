@@ -22,29 +22,47 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/root/ueventd.mt6582.rc:root/ueventd.mt6582.rc \
 	$(LOCAL_PATH)/root/init.mt6582.rc:root/init.mt6582.rc \
+	$(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
 	$(LOCAL_PATH)/root/init.mt6582.usb.rc:/root/init.mt6582.usb.rc
 
 PRODUCT_PROPERTY_OVERRIDES := \
-	ro.opengles.version=131072 \
+	persist.gemini.sim_num=2 \
+	ro.gemini.smart_sim_switch=false \
+	ro.gemini.smart_3g_switch=1 \
+	ril.specific.sm_cause=1 \
+	bgw.current3gband=0 \
+	ril.external.md=0 \
+#	ro.btstack=blueangel \
+	ril.current.share_modem=2 \
+	ro.mediatek.gemini_support=true \
+	persist.radio.fd.counter=15 \
+	persist.radio.fd.off.counter=5 \
+	persist.radio.fd.r8.counter=15 \
+	persist.radio.fd.off.r8.counter=5 \
+	ril.first.md=1 \
+	ril.flightmode.poweroffMD=1 \
+	ril.radiooff.poweroffMD=0 \
+	ril.telephony.mode=0 \
+	ril.active.md=0 \
+	persist.mtk.anr.mechanism=1
+	mediatek.wlan.chip=CONSYS_MT6582 \
+	mediatek.wlan.module.postfix=_consys_mt6582 \
+	persist.mtk.wcn.combo.chipid=0x6582 \
 	ro.mediatek.platform=MT6582 \
 	ro.mediatek.chip_ver=S01 \
 	ro.mediatek.version.branch=KK1.MP1 \
 	ro.mediatek.version.sdk=2 \
-	ro.sf.lcd_density=294 \
-	persist.sys.usb.config=adb
-
-PRODUCT_PROPERTY_OVERRIDES := \
-	wifi.interface=wlan0 \
-	wifi.tethering.interface=ap0 \
-	wifi.direct.interface=p2p0 \
-	ro.mediatek.wlan.wsc=1 \
 	ro.mediatek.wlan.p2p=1 \
-	mediatek.wlan.ctia=0 \
-	persist.mtk.wcn.combo.chipid=-1 \
-	mediatek.wlan.chip=MT6628 \
-	mediatek.wlan.module.postfix=_mt6628
+	ro.mediatek.wlan.wsc=1 \
+	ro.opengles.version=131072 \
+	ro.sf.lcd_density=294 \
+	wifi.direct.interface=p2p0 \
+	wifi.interface=wlan0 \
+	wifi.tethering.interface=ap0
 
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+WIFI_BAND := 802_11_BG
 
 # Inherit tablet dalvik settings
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)

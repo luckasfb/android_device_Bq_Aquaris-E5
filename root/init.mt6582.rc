@@ -1,4 +1,5 @@
-import init.mt6582.usb.rc
+# import init.mt6582.usb.rc
+# import init.modem.rc
 
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
@@ -30,7 +31,13 @@ on init
 
 on fs
     mount_all /fstab.mt6582
-
+	
+	# device info /proc interface
+    #insmod /system/lib/modules/devinfo.ko
+    exec /system/xbin/mknod /dev/devmap c 196 0;
+    chmod 0440 /dev/devmap
+    chown root system /dev/devmap
+    
 on post-fs-data
     # we will remap this as /mnt/sdcard with the sdcard fuse tool
     mkdir /data/media 0775 media_rw media_rw
@@ -222,12 +229,6 @@ on post-fs-data
 
     # device apc settings
     #insmod /system/lib/modules/devapc.ko
-
-    # device info /proc interface
-    #insmod /system/lib/modules/devinfo.ko
-    exec /system/xbin/mknod /dev/devmap c 196 0;
-    chmod 0440 /dev/devmap
-    chown root system /dev/devmap
 	
 	#/dev/ttyMT2 for 662x_launcher
     chmod 0660 /dev/ttyMT2
@@ -435,7 +436,7 @@ service nvram_daemon /system/bin/nvram_daemon
 service 662x_launcher /system/bin/logwrapper /system/bin/6620_launcher -b 4000000 -p /system/etc/firmware/ -d /dev/ttyMT2
     user system
     group system
-    oneshot
+    class core
 
 service featured /system/bin/featured
     class core
@@ -456,7 +457,7 @@ service pq /system/bin/pq
 service wlanLoader /system/bin/wlan_loader
     user root
     group root
-    oneshot
+    class main
 
 #
 # MT6620 related services (Begin)
