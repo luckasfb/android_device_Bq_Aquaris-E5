@@ -77,6 +77,11 @@ lib/libcustom_nvram.so
 lib/libnvram_daemon_callback.so
 lib/libnvram_platform.so
 lib/libnvram_sec.so
+lib/libfile_op.so
+lib/libhwm.so 
+
+bin/wpa_supplicant
+lib/libwapi.so
 
 etc/firmware/catcher_filter_1_wg_n.bin
 etc/firmware/modem_1_wg_n.img

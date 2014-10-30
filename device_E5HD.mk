@@ -30,6 +30,8 @@ PRODUCT_PROPERTY_OVERRIDES := \
 	ro.mediatek.chip_ver=S01 \
 	ro.mediatek.version.branch=KK1.MP1 \
 	ro.mediatek.version.sdk=2 \
+	ro.sf.lcd_density=294 \
+	persist.sys.usb.config=adb
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	wifi.interface=wlan0 \
