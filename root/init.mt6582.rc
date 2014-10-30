@@ -434,6 +434,30 @@ on post-fs-data
     #sn
     chmod 0664 /sys/class/android_usb/android0/iSerial
     chown root system /sys/class/android_usb/android0/iSerial
+    
+## Thermal
+	#change permissions on thermal devices
+	chown root system /proc/mtktscpu/mtktscpu
+	chmod 0660 /proc/mtktscpu/mtktscpu
+	chown root system /proc/mtktsabb/mtktsabb
+	chmod 0660 /proc/mtktsabb/mtktsabb
+	chown root system /proc/mtktsbattery/mtktsbattery
+	chmod 0660 /proc/mtktsbattery/mtktsbattery
+	chown root system /proc/mtktspa/mtktspa
+	chmod 0660 /proc/mtktspa/mtktspa
+	chown root system /proc/mtktspmic/mtktspmic
+	chmod 0660 /proc/mtktspmic/mtktspmic
+	chown root system /proc/driver/mtk_thermal_monitor
+	chmod 0660 /proc/driver/mtk_thermal_monitor
+	chown root radio /proc/driver/mtm_scen_call
+	chmod 0660 /proc/driver/mtm_scen_call
+	chown system system /proc/driver/mtk_cl_sd_pid
+	chmod 0660 /proc/driver/mtk_cl_sd_pid
+	chown root system /proc/wmt_tm/wmt_tm
+	chown system system /proc/wmt_tm/tm_pid
+	chown system system /proc/wmt_tm/tx_thro
+	chown system system /proc/wmt_tm/wmt_val
+	chown system system /proc/wmt_tm/wfd_stat
 
 service nvram_daemon /system/bin/nvram_daemon
     class main
@@ -588,3 +612,89 @@ on property:service.dhcp6c_wlan0.enable=0
 on property:service.dhcp6c_wlan0.enable=1
     start dhcp6c_wlan0
 
+#
+# sensor services
+#
+
+service msensord /system/bin/msensord
+	class main
+    oneshot
+
+
+service st480d /system/bin/st480d
+    disabled
+    user system
+    group system
+    
+
+service s62xd /system/bin/s62xd
+    disabled
+    user compass
+    group system
+
+service ami304d /system/bin/logwrapper /system/bin/ami304d
+    user system
+    group system
+    disabled
+    oneshot
+
+service memsicd /system/bin/memsicd
+     disabled
+    user system
+    group system
+    oneshot
+
+service memsicd3416x /system/bin/memsicd3416x
+     disabled
+	user system
+    group system
+    oneshot
+
+service akmd8975 /system/bin/akmd8975
+    disabled
+    user system
+    group system
+
+service akmd8963 /system/bin/akmd8963
+    disabled
+    user system
+    group system
+
+service akmd09911 /system/bin/akmd09911
+    disabled
+    user system
+    group system
+
+service bmm050d /system/bin/bmm050d
+    disabled
+    user system
+    group system
+
+service mc6420d /system/bin/mc6420d
+    disabled
+    user system
+    group system
+    
+service qmc5983d /system/bin/qmc5983d
+     disabled
+	 user system
+    group system
+
+service orientationd /system/bin/orientationd
+    disabled
+    user system
+    group system input
+
+service geomagneticd /system/bin/geomagneticd
+    disabled
+    user system
+    group system input
+
+# thermal
+service thermal_manager /system/bin/thermal_manager
+    user root
+    oneshot
+
+service thermal /system/bin/thermal
+    user system
+    group system

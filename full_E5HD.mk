@@ -14,7 +14,7 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/Bq/E5HD/device_E5HD.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Configure as xhdpi device to prevent breaking without mdpi drawables
 PRODUCT_AAPT_CONFIG := hdpi xhdpi xxhdpi
