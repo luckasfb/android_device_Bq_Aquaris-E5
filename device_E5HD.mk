@@ -23,13 +23,15 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/root/ueventd.mt6582.rc:root/ueventd.mt6582.rc \
 	$(LOCAL_PATH)/root/init.mt6582.rc:root/init.mt6582.rc \
 	$(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
+	$(LOCAL_PATH)/root/init.protect.rc:root/init.protect.rc \
 	$(LOCAL_PATH)/root/init.mt6582.usb.rc:/root/init.mt6582.usb.rc
 
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
 	frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
 	frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
-	frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+	frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
+	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	persist.gemini.sim_num=2 \
@@ -50,6 +52,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 	ril.radiooff.poweroffMD=0 \
 	ril.telephony.mode=0 \
 	ril.active.md=0 \
+	rild.libpath=/system/lib/mtk-ril.so \
 	persist.mtk.anr.mechanism=1
 	mediatek.wlan.chip=CONSYS_MT6582 \
 	mediatek.wlan.module.postfix=_consys_mt6582 \
@@ -62,11 +65,15 @@ PRODUCT_PROPERTY_OVERRIDES := \
 	ro.mediatek.wlan.wsc=1 \
 	ro.opengles.version=131072 \
 	ro.sf.lcd_density=294 \
+	ro.telephony.ril_class=MediaTekRIL \
 	wifi.direct.interface=p2p0 \
 	wifi.interface=wlan0 \
-	wifi.tethering.interface=ap0
+	wifi.tethering.interface=ap0 \
 
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+PRODUCT_PACKAGES += \
+	gsm0710muxd
 
 WIFI_BAND := 802_11_BG
 

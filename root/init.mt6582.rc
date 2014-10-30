@@ -1,8 +1,12 @@
-# import init.mt6582.usb.rc
-# import init.modem.rc
+import init.mt6582.usb.rc
+import init.modem.rc
+import init.protect.rc
 
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
+
+on boot
+    chown root radio /proc/cmdline
 
 on init  
     export EXTERNAL_STORAGE /storage/sdcard0
@@ -27,12 +31,21 @@ on init
 
 on fs
     mount_all /fstab.mt6582
+    mkdir /protect_f
+    mkdir /protect_s 
+
+    chown system system /protect_f
+    chown system system /protect_s
+    chmod 0771 /protect_f
+    chmod 0771 /protect_s
 	
 	# device info /proc interface
     #insmod /system/lib/modules/devinfo.ko
     exec /system/xbin/mknod /dev/devmap c 196 0;
     chmod 0440 /dev/devmap
     chown root system /dev/devmap
+    
+    mkdir /dev/radio 0770 radio radio
     
 on post-fs-data
     setprop vold.post_fs_data_done 1
@@ -54,6 +67,8 @@ on post-fs-data
     # dhcpv6 server 
     mkdir /data/misc/wide-dhcpv6 0770 dhcp wifi
     chown dhcp wifi /data/misc/wide-dhcpv6
+    
+    chown root radio /proc/cmdline
     
 	# radvd
     mkdir /data/misc/radvd 0770 system system

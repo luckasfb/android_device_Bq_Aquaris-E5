@@ -71,6 +71,13 @@ lib/libion.so
 
 bin/wlan_loader
 bin/6620_launcher
+bin/ccci_mdinit
+bin/ccci_fsd
+bin/muxreport 
+bin/rild
+bin/rildmd2
+bin/pppd_dt
+bin/pppd
 
 bin/nvram_daemon
 bin/nvram_agent_binder
@@ -81,7 +88,9 @@ lib/libnvram_daemon_callback.so
 lib/libnvram_platform.so
 lib/libnvram_sec.so
 lib/libfile_op.so
-lib/libhwm.so 
+lib/libhwm.so
+lib/librilmtk.so
+lib/mtk-ril.so
 
 etc/firmware/catcher_filter_1_wg_n.bin
 etc/firmware/modem_1_wg_n.img
