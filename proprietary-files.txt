@@ -100,6 +100,9 @@ lib/libaudiodcrflt.so
 lib/libbessound_mtk.so
 lib/libbessound_hd_mtk.so
 
+lib/libbluetoothdrv.so
+lib/libbluetooth_mtk.so
+
 bin/wlan_loader
 bin/6620_launcher
 bin/ccci_mdinit
