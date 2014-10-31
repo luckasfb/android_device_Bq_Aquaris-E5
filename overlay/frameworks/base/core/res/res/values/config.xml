@@ -127,4 +127,8 @@
         <item>255</item>
     </integer-array>
     <array name="config_autoBrightnessKeyboardBacklightValues" />
+    
+    <bool name="config_enableTorch">true</bool>
+    
+    <integer name="config_deviceHardwareKeys">19</integer>
 </resources>
