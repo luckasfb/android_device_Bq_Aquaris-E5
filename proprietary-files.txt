@@ -47,7 +47,7 @@ vendor/pittpatt/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-r0-ri30
 vendor/pittpatt/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rn30-ri30.5-v24.bin
 vendor/pittpatt/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rp30-ri30.5-v24.bin
 
-# lib/hw/hwcomposer.mt6582.so
+lib/hw/hwcomposer.mt6582.so
 lib/hw/gps.default.so
 lib/hw/lights.default.so
 lib/hw/power.default.so
