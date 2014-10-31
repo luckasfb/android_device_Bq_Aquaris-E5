@@ -83,6 +83,11 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PACKAGES += \
 	gsm0710muxd
 
+# audio
+PRODUCT_PACKAGES += \
+	audio.r_submix.default \
+	libblisrc
+
 # wifi
 PRODUCT_PACKAGES += \
 	lib_driver_cmd_mtk
