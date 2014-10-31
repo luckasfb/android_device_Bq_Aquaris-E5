@@ -56,7 +56,6 @@ lib/hw/camera.default.so
 lib/hw/sensors.default.so
 lib/hw/gralloc.default.so
 lib/hw/keystore.default.so
-lib/libkeystore_client.so
 lib/hw/gralloc.mt6582.so
 
 lib/libm4u.so
@@ -65,8 +64,32 @@ lib/libdpframework.so
 lib/libion.so
 
 lib/libaudiocustparam.so
+lib/libimageio.so
+lib/libimageio_plat_drv.so
+lib/libbwc.so
+lib/libcam.utils.so
+lib/libcam.paramsmgr.so
 lib/libaed.so
+lib/libcameracustom.so
+lib/libcam.exif.so
+lib/libmatv_cust.so
+lib/libfeatureio.so
+lib/libcamalgo.so
 lib/libmtk_drvb.so
+lib/lib3a.so
+lib/libcam.client.so
+lib/libmpo.so
+lib/libmpoencoder.so
+lib/libcam.camshot.so
+lib/libcam.campipe.so
+lib/libcam.camadapter.so
+lib/libcam.device1.so
+lib/libcam.utils.sensorlistener.so
+lib/libcam_hwutils.so
+lib/libcam_mmp.so
+lib/libcam_platform.so
+lib/libcam_utils.so
+lib/libJpgEncPipe.so
 lib/libblisrc.so
 lib/libblisrc32.so
 lib/libspeech_enh_lib.so
